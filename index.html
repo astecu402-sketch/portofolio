@@ -949,7 +949,7 @@
 
     <div class="project-grid">
 
-      <!-- Featured project -->
+      <!-- Featured project 1: Jasa Joki Web -->
       <div class="project-card featured reveal d1">
         <div class="proj-body">
           <div class="project-num">
@@ -970,8 +970,8 @@
         <div class="proj-number-big">01</div>
       </div>
 
-      <!-- Card 2 -->
-       <div class="project-card featured reveal d1">
+      <!-- Featured project 2: Web jual beli sepatu -->
+      <div class="project-card featured reveal d1">
         <div class="proj-body">
           <div class="project-num">
             PROJECT 02
@@ -989,14 +989,38 @@
         <div class="proj-number-big">02</div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Card 3: Web Sistem Feedback Mahasiswa -->
       <div class="project-card reveal d3">
-        <div class="project-num">PROJECT 03</div>
-        <h3>Futuristic UI Design</h3>
+        <div class="project-num">
+          PROJECT 03
+          <span class="live-badge">LIVE</span>
+        </div>
+        <h3>Sistem Feedback Mahasiswa</h3>
         <p>
-          Interface modern dengan konsep futuristic dan premium
-          design yang menonjolkan estetika masa depan.
+          Platform untuk mengumpulkan dan mengelola feedback dari mahasiswa
+          secara terstruktur. Dibangun dengan antarmuka yang intuitif.
         </p>
+        <a href="http://sistem-feedback-mahasiswa.free.nf/?i=1"
+           target="_blank" rel="noopener" class="proj-link">
+          Open Website <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Card 4: Web Berbasis AI -->
+      <div class="project-card reveal d2">
+        <div class="project-num">
+          PROJECT 04
+          <span class="live-badge">LIVE</span>
+        </div>
+        <h3>Web Berbasis AI</h3>
+        <p>
+          Eksplorasi kecerdasan buatan dalam web development.
+          Menghadirkan pengalaman interaktif yang cerdas dan adaptif.
+        </p>
+        <a href="https://infinityfree.synergize.co/?i=2"
+           target="_blank" rel="noopener" class="proj-link">
+          Open Website <span class="arrow">→</span>
+        </a>
       </div>
 
     </div>
@@ -1011,99 +1035,4 @@
 
     <div class="contact-grid">
       <div class="contact-card reveal d1">
-        <div class="contact-icon">📧</div>
-        <div class="contact-info">
-          <div class="contact-label">EMAIL</div>
-          <div class="contact-value">draturu568@gmail.com</div>
-        </div>
-      </div>
-      <div class="contact-card reveal d2">
-        <div class="contact-icon">📱</div>
-        <div class="contact-info">
-          <div class="contact-label">PHONE</div>
-          <div class="contact-value">085834104940</div>
-        </div>
-      </div>
-      <div class="contact-card reveal d3">
-        <div class="contact-icon">📍</div>
-        <div class="contact-info">
-          <div class="contact-label">LOCATION</div>
-          <div class="contact-value">Padang Tiji</div>
-        </div>
-      </div>
-      <div class="contact-card reveal d1">
-        <div class="contact-icon">📷</div>
-        <div class="contact-info">
-          <div class="contact-label">INSTAGRAM</div>
-          <div class="contact-value">@theycallmee.andraa</div>
-        </div>
-      </div>
-      <div class="contact-card reveal d2">
-        <div class="contact-icon">🎵</div>
-        <div class="contact-info">
-          <div class="contact-label">TIKTOK</div>
-          <div class="contact-value">@andraa_sky</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-logo">XEON</div>
-    <p>© 2026 XEON Digital Portfolio — Muhammad Andra Andika</p>
-  </footer>
-
-  <script>
-    /* ── Navbar scroll ── */
-    const header = document.getElementById('header');
-    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    /* ── Hamburger ── */
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
-
-    hamburger.addEventListener('click', () => {
-      const open = hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open', open);
-    });
-
-    ['mob1','mob2','mob3'].forEach(id => {
-      document.getElementById(id).addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-      });
-    });
-
-    /* ── Scroll reveal ── */
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          revealObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-
-    revealEls.forEach(el => revealObs.observe(el));
-
-    /* ── Profile image fallback ── */
-    const img = document.getElementById('profileImg');
-    if (img) {
-      img.addEventListener('error', () => {
-        const card = document.getElementById('profileCard');
-        card.innerHTML =
-          '<div class="profile-placeholder">' +
-          '<div class="ph-icon">👤</div>' +
-          '<span>Andra Andika</span>' +
-          '</div>' +
-          '<div class="status-badge">✦ Available for Work</div>';
-      });
-    }
-
-    console.log('XEON PORTFOLIO — READY ✦');
-  </script>
-</body>
-</html>
+        <div class="contact-icon">
